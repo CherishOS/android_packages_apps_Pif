@@ -14,7 +14,7 @@ import androidx.preference.Preference;
 import androidx.preference.PreferenceFragmentCompat;
 import androidx.preference.PreferenceManager;
 
-import com.android.internal.util.evolution.PixelPropsUtils;
+import com.android.internal.util.cherish.PixelPropsUtils;
 import com.android.settingslib.widget.TopIntroPreference;
 
 import com.goolag.pif.R;
@@ -40,7 +40,7 @@ public class Pif extends PreferenceFragmentCompat
     public void onCreatePreferences(Bundle savedInstanceState, String rootKey) {
         setPreferencesFromResource(R.xml.main, rootKey);
 
-        String selectedArrayName = Settings.System.getString(
+       String selectedArrayName = Settings.System.getString(
                 getContext().getContentResolver(), Settings.System.PPU_SPOOF_BUILD_GMS_ARRAY);
 
         int selectedArrayResId = getResources().getIdentifier(selectedArrayName, "array", getContext().getPackageName());
